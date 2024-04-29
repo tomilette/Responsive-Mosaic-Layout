@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { ImagePattern, HoverColors } from "./utils/constants";
+import { HoverColors } from "./utils/constants";
 import { getImages, uploadImage } from "./utils/services";
 
 import Card from "./components/card";
@@ -42,8 +42,6 @@ function App() {
         return (
           <Card
             key={"image_" + idx}
-            w_size={ImagePattern[idx % ImagePattern?.length][0]}
-            h_size={ImagePattern[idx % ImagePattern?.length][1]}
             title={item?.title}
             description={item?.description}
             image_url={item?.image}
